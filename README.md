@@ -1,1 +1,2 @@
-# Completed tasks from DS Foundations course
+# Completed tasks from the DS Foundations course
+
