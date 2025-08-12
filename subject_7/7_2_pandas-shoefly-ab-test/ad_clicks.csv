@@ -1,0 +1,6 @@
+user_id,utm_source,day,ad_click_timestamp,experimental_group
+008b7c6c-7272-471e-b90e-930d548bd8d7,google,6 - Saturday,7:18,A
+009abb94-5e14-4b6c-bb1c-4f4df7aa7557,facebook,7 - Sunday,nan,B
+00f5d532-ed58-4570-b6d2-768df5f41aed,twitter,2 - Tuesday,nan,A
+011adc64-0f44-4fd9-a0bb-f1506d2ad439,google,2 - Tuesday,nan,B
+012137e6-7ae7-4649-af68-205b4702169c,facebook,7 - Sunday,nan,B

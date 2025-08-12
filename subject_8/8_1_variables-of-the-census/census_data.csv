@@ -1,0 +1,6 @@
+first_name,last_name,birth_year,voted,num_children,income_year,higher_tax,marital_status
+Denise,Ratke,2005,False,0,92129.41,disagree,single
+Hali,Cummerata,1987,False,0,75649.17,neutral,divorced
+Salomon,Orn,1992,True,2,166313.45,agree,single
+Sarina,Schiller,1965,False,2,71704.81,strongly agree,married
+Gust,Abernathy,1945,False,2,143316.08,agree,married
