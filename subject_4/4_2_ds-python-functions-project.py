@@ -4,6 +4,11 @@ def calculate_insurance_cost(name, age, sex, bmi, num_of_children, smoker):
     message = f"The estimated insurance cost for {name} is {estimated_cost} dollars."
     return message, estimated_cost
 
+def second_calc(name, current_year, age):
+    year_of_birth = current_year - age
+    message = f"{name} was born in {year_of_birth}."
+    return message, year_of_birth
+
 
 # Create a function to calculate the difference in insurance costs
 def insurance_diff(cost1, cost2):
@@ -46,3 +51,6 @@ my_message, my_insurance_cost = calculate_insurance_cost(
     smoker=0
 )
 print(my_message)
+
+year_of_birth_m, current_year_m = second_calc("Your Name", 2021, 30)
+print(year_of_birth_m, current_year_m)

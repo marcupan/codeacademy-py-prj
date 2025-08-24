@@ -12,7 +12,7 @@ staten_island = inventory.head(10)
 # Task 4: Select product_description from staten_island
 product_request = staten_island['product_description']
 
-# Task 5: Select rows where location is Brooklyn and product_type is seeds
+# Task 5: Select rows where the location is Brooklyn and product_type is seeds
 seed_request = inventory[(inventory['location'] == 'Brooklyn') & (inventory['product_type'] == 'seeds')]
 
 # Task 6: Add a column in_stock (True if quantity > 0, False otherwise)

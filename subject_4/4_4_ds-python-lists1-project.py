@@ -55,3 +55,27 @@ estimated_insurance_data.append(("Akira", akira_insurance_cost))
 # Print updated data
 print("Updated actual insurance cost data:", insurance_data)
 print("Updated estimated insurance cost data:", estimated_insurance_data)
+
+
+test_keys = ["key_1", "key_2", "key_3"]
+test_values = [1, 2, 3]
+test_zip = zip(test_keys, test_values)
+test_zip_2 = zip(test_keys, test_values)
+print("test_zip: ", test_zip)
+test_dict = dict(test_zip)
+print("test_dict: ", test_dict)
+test_list = list(test_zip_2)
+print("test_list: ", test_list)
+test_list.append(("key_3", 3))
+print("test_list: ", test_list)
+
+def test_named_props(keys, values):
+    zip_obj = zip(keys, values)
+    return dict(zip_obj)
+
+test_named_props_dict = test_named_props(test_keys, test_values)
+print(test_named_props(test_keys, test_values))
+
+test_conditional_list_comp = sum([value for value in test_named_props_dict.values() if value > 1])
+test_multiply_list_comp = [value * 2 for key, value in test_named_props_dict.items()]
+print(test_conditional_list_comp, test_multiply_list_comp)

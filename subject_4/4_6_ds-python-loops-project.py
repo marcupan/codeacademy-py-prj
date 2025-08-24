@@ -37,7 +37,7 @@ updated_estimated_costs = [cost * 11 / 10 for cost in estimated_insurance_costs]
 # Task 11: Print updated_estimated_costs
 print("Updated Estimated Costs:", updated_estimated_costs)
 
-# Extra: Convert first for loop to a while loop
+# Extra: Convert the first for loop to a while loop
 total_cost = 0
 i = 0
 while i < len(actual_insurance_costs):

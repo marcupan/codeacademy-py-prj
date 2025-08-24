@@ -19,3 +19,11 @@ keanu_insurance_cost = estimate_insurance_cost(name='Keanu', age=29, sex=1, num_
 
 # Analyze your own insurance cost
 my_insurance_cost = estimate_insurance_cost(name='Your Name', age=30, sex=1, num_of_children=2, smoker=0)
+
+def test_condition(condition, true_value, false_value):
+    if condition:
+        return true_value
+    else:
+        return false_value
+
+print(test_condition(True, 1, 2))

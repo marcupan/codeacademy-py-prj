@@ -15,15 +15,15 @@ with open('passwords.csv') as password_file:
 
 # Task 6: Exit the with block for "passwords.csv" (file is automatically closed)
 
-# Task 7: Open a new file "compromised_users.txt" in write mode
+# Task 7: Open a new file "compromised_users.txt" in writing mode
 with open('compromised_users.txt', 'w') as compromised_user_file:
     # Task 8: Write each username from the compromised_users list to the file
     for user in compromised_users:
         compromised_user_file.write(user + '\n')
 
-# Task 9: Exit the with block for "compromised_users.txt" (file is automatically closed)
+# Task 9: Exit the with block for "compromised_users.txt" (a file is automatically closed)
 
-# Task 10: Open a JSON file called "boss_message.json" in write mode
+# Task 10: Open a JSON file called "boss_message.json" in writing mode
 with open('boss_message.json', 'w') as boss_message:
     # Task 11: Create a dictionary with a message for the boss
     boss_message_dict = {
@@ -33,7 +33,7 @@ with open('boss_message.json', 'w') as boss_message:
     # Task 14: Write the dictionary to the JSON file using json.dump
     json.dump(boss_message_dict, boss_message)
 
-# Task 15: Exit the with block for "boss_message.json" (file is automatically closed)
+# Task 15: Exit the with block for "boss_message.json" (a file is automatically closed)
 
 # Task 16: Define Slash Null's signature as a multi-line string
 slash_null_sig = """
@@ -55,7 +55,7 @@ slash_null_sig = """
 \_)__)\____/\____/\____/
 """
 
-# Task 17: Open a file called "new_passwords.csv" in write mode
+# Task 17: Open a file called "new_passwords.csv" in writing mode
 with open('new_passwords.csv', 'w') as new_passwords_obj:
     # Task 18: Write Slash Null's signature to the new_passwords file
     new_passwords_obj.write(slash_null_sig)

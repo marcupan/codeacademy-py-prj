@@ -94,7 +94,7 @@ def create_hurricanes_table(names, months, years, max_sustained_winds, areas_aff
     return hurricanes
 
 
-# Create and view the hurricanes dictionary
+# Create and view the hurricane dictionary
 hurricanes = create_hurricanes_table(names, months, years, max_sustained_winds, areas_affected, damages, deaths)
 
 
@@ -110,7 +110,7 @@ def organize_by_year(hurricanes):
     return hurricanes_by_year
 
 
-# Create a new dictionary of hurricanes with year as key
+# Create a new dictionary of hurricanes with year as a key
 hurricanes_by_year = organize_by_year(hurricanes)
 
 
@@ -126,7 +126,7 @@ def count_affected_areas(hurricanes):
     return area_count
 
 
-# Create dictionary of areas to store the number of hurricanes involved in
+# Create a dictionary of areas to store the number of hurricanes involved in
 area_count = count_affected_areas(hurricanes)
 
 
@@ -137,7 +137,7 @@ def most_frequent_area(area_count):
     return max_area, area_count[max_area]
 
 
-# Find most frequently affected area and the number of hurricanes involved in
+# Find the most frequently affected area and the number of hurricanes involved in
 most_affected_area, hurricane_count = most_frequent_area(area_count)
 
 
@@ -153,7 +153,7 @@ def deadliest_hurricane(hurricanes):
     return deadliest, max_deaths
 
 
-# Find highest mortality hurricane and the number of deaths
+# Find the highest mortality hurricane and the number of deaths
 deadliest, max_deaths = deadliest_hurricane(hurricanes)
 
 
@@ -171,7 +171,7 @@ def rate_by_mortality(hurricanes, mortality_scale):
 
 
 mortality_scale = {0: 0, 1: 100, 2: 500, 3: 1000, 4: 10000}
-# Categorize hurricanes in new dictionary with mortality severity as key
+# Categorize hurricanes in the new dictionary with mortality severity as key
 hurricanes_by_mortality = rate_by_mortality(hurricanes, mortality_scale)
 
 
@@ -188,7 +188,7 @@ def max_damage_hurricane(hurricanes):
     return most_damaging, max_damage
 
 
-# Find highest damage inducing hurricane and its total cost
+# Find the highest damage-inducing hurricane and its total cost
 most_damaging, max_damage = max_damage_hurricane(hurricanes)
 
 # 9
@@ -214,7 +214,7 @@ def rate_by_damage(hurricanes, damage_scale):
     return damage_ratings
 
 
-# Categorize hurricanes in new dictionary with damage severity as key
+# Categorize hurricanes in the new dictionary with damage severity as key
 hurricanes_by_damage = rate_by_damage(hurricanes, damage_scale)
 
 print(hurricanes_by_damage)

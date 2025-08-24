@@ -1,5 +1,3 @@
-# Add your code here
-
 # 1
 medical_costs = {}
 

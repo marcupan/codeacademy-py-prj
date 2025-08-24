@@ -14,7 +14,7 @@ paintings.append(('The Wounded Deer', 1946))
 paintings.append(('Me and My Doll', 1937))
 print("Updated paintings list:", paintings)
 
-# Step 5: Find the length of the paintings list
+# Step 5: Find the length of the painting list
 total_paintings = len(paintings)
 print("Total number of paintings:", total_paintings)
 
