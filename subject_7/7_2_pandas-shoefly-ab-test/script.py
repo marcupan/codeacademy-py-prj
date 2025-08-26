@@ -27,7 +27,7 @@ clicks_pivot = clicks_by_source.pivot(
 clicks_pivot.columns = ['utm_source', 'not_clicked', 'clicked']
 print(clicks_pivot)
 
-# Task 6: Add percent_clicked column
+# Task 6: Add a percent_clicked column
 clicks_pivot['percent_clicked'] = clicks_pivot['clicked'] / (clicks_pivot['clicked'] + clicks_pivot['not_clicked'])
 print(clicks_pivot)
 
@@ -52,7 +52,7 @@ print(clicks_by_group_pivot)
 a_clicks = ad_clicks[ad_clicks['experimental_group'] == 'A']
 b_clicks = ad_clicks[ad_clicks['experimental_group'] == 'B']
 
-# Task 10: Calculate percent of users who clicked by day for each group
+# Task 10: Calculate the percentage of users who clicked by day for each group
 a_clicks_by_day = a_clicks.groupby(['day', 'is_click']).user_id.count().reset_index()
 a_clicks_pivot = a_clicks_by_day.pivot(
     index='day',
