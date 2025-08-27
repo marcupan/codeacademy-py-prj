@@ -43,7 +43,7 @@ all_data = visits.merge(cart, how='left', on='user_id') \
 print("All Data:")
 print(all_data.head())
 
-# Task 8: Percentage of users who proceeded to checkout but did not purchase
+# Task 8: Percentage of users who proceeded to check out but did not purchase
 null_purchase_time = all_data['purchase_time'].isnull().sum()
 checkout_to_purchase = (null_purchase_time / len(all_data[~all_data['checkout_time'].isnull()])) * 100
 print("Percent of users who proceeded to checkout but did not purchase:", checkout_to_purchase)
@@ -54,7 +54,7 @@ print(f"Visit to Cart Dropoff: {percent_no_cart}%")
 print(f"Cart to Checkout Dropoff: {percent_no_checkout}%")
 print(f"Checkout to Purchase Dropoff: {checkout_to_purchase}%")
 
-# Task 10: Calculate the time from initial visit to final purchase
+# Task 10: Calculate the time from an initial visit to final purchase
 all_data['time_to_purchase'] = all_data['purchase_time'] - all_data['visit_time']
 
 # Task 11: Examine the new column
