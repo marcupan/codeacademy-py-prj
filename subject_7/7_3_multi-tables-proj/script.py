@@ -18,6 +18,7 @@ print(purchase.head())
 
 # Task 2: Combine visits and cart using a left merge
 visits_cart = pd.merge(visits, cart, how='left', on='user_id')
+print("Visits and Cart:", visits_cart.head())
 
 # Task 3: Length of the merged DataFrame
 print("Length of visits_cart:", len(visits_cart))
