@@ -1,7 +1,7 @@
 import pandas as pd
 
-# Display full column contents with a large integer value
-pd.set_option('display.max_colwidth', -1)
+# Display full column contents with unlimited width
+pd.set_option('display.max_colwidth', None)
 
 # Load the data
 jeopardy = pd.read_csv('jeopardy.csv')
@@ -22,7 +22,7 @@ def filter_questions(data, words):
 filtered_questions = filter_questions(jeopardy, ['King', 'England'])
 print(filtered_questions['Question'])
 
-# Task 4: Improve robustness of filter_questions
+# Task 4: Improve the robustness of filter_questions
 def filter_questions_robust(data, words):
     filter_func = lambda x: all(f" {word.lower()} " in f" {x.lower()} " for word in words)
     return data[data['Question'].apply(filter_func)]
@@ -56,7 +56,7 @@ unique_answers = count_unique_answers(filtered_king)
 print(unique_answers)
 
 # Task 7: Explore further
-# Example 1: Questions about "Computer" from the 90s vs 2000s
+# Example 1: Questions about "Computer" from the 90s vs. 2000s
 jeopardy['Air Date'] = pd.to_datetime(jeopardy['Air Date'])
 questions_90s = filter_questions_robust(jeopardy[jeopardy['Air Date'].dt.year.between(1990, 1999)], ['Computer'])
 questions_2000s = filter_questions_robust(jeopardy[jeopardy['Air Date'].dt.year.between(2000, 2009)], ['Computer'])
