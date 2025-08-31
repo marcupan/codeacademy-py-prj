@@ -10,43 +10,50 @@ print(os.getcwd())
 
 # Task 1: Load in the Spotify dataset
 spotify_data = pd.read_csv('genres_v2.csv')
+print("Task 1: Loaded Spotify dataset")
 
 # Task 2: Preview the dataset
+print("Task 2: Preview of the dataset:")
 print(spotify_data.head())
 
 # Task 3: Select the relevant column (tempo)
 song_tempos = spotify_data["tempo"]
+print("Task 3: Selected tempo column")
 
 # Task 5: Plot the population distribution with the mean labeled
+print("Task 5: Plotting population distribution of tempos")
 population_distribution(song_tempos)
 
 # Task 6: Sampling distribution of the sample mean (sample size = 30)
+print("Task 6: Creating sampling distribution of sample mean (n=30)")
 sampling_distribution(song_tempos, samp_size=30, stat="Mean")
 
 # Task 8: Sampling distribution of the sample minimum (sample size = 30)
+print("Task 8: Creating sampling distribution of sample minimum (n=30)")
 sampling_distribution(song_tempos, samp_size=30, stat="Minimum")
 
 # Task 10: Sampling distribution of the sample variance (sample size = 30)
+print("Task 10: Creating sampling distribution of sample variance (n=30)")
 sampling_distribution(song_tempos, samp_size=30, stat="Variance")
 
 # Task 13: Calculate the population mean and standard deviation
 population_mean = np.mean(song_tempos)
 population_std = np.std(song_tempos)
-print(f"Population Mean: {population_mean}")
-print(f"Population Standard Deviation: {population_std}")
+print(f"Task 13: Population Mean: {population_mean:.2f}")
+print(f"Task 13: Population Standard Deviation: {population_std:.2f}")
 
 # Task 14: Calculate the standard error
 sample_size = 30
 standard_error = population_std / np.sqrt(sample_size)
-print(f"Standard Error: {standard_error}")
+print(f"Task 14: Standard Error: {standard_error:.2f}")
 
 # Task 15: Probability of observing an average tempo of 140 bpm or lower
 prob_140_or_lower = stats.norm.cdf(140, loc=population_mean, scale=standard_error)
-print(f"Probability of sample mean ≤ 140 bpm: {prob_140_or_lower:.4f}")
+print(f"Task 15: Probability of sample mean ≤ 140 bpm: {prob_140_or_lower:.4f}")
 
 # Task 16: Probability of observing an average tempo of 150 bpm or higher
 prob_150_or_higher = 1 - stats.norm.cdf(150, loc=population_mean, scale=standard_error)
-print(f"Probability of sample mean ≥ 150 bpm: {prob_150_or_higher:.4f}")
+print(f"Task 16: Probability of sample mean ≥ 150 bpm: {prob_150_or_higher:.4f}")
 
-# EXTRA: Exploring additional statistical properties
+# EXTRA: Exploring additional statistical properties,
 # You can add custom statistics to choose_statistic() in helper_functions.py

@@ -1,7 +1,7 @@
 # import libraries
 import pandas as pd
 import numpy as np
-from scipy.stats import ttest_1samp, binom_test
+from scipy.stats import ttest_1samp, binomtest
 
 # load data
 heart = pd.read_csv('heart_disease.csv')
@@ -51,7 +51,7 @@ expected_diabetes = num_patients * 0.08
 print("Expected number with fbs > 120 (8%):", expected_diabetes)
 
 # Task 9-10: Hypothesis test for fbs rate > 8%
-pval_fbs = binom_test(num_highfbs_patients, n=num_patients, p=0.08, alternative='greater')
+pval_fbs = binomtest(num_highfbs_patients, n=num_patients, p=0.08, alternative='greater').pvalue
 print("P-value for fbs > 120 test:", pval_fbs)
 if pval_fbs < 0.05:
     print("Conclusion: Significantly greater than 8%")
