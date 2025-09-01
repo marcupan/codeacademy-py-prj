@@ -9,7 +9,7 @@ codecademy = pd.read_csv('codecademy.csv')
 # Task 1: Print the first five rows
 print(codecademy.head())
 
-# Task 2: Create a scatter plot of score vs completed
+# Task 2: Create a scatter plot of score vs. completed
 plt.scatter(codecademy['completed'], codecademy['score'])
 plt.xlabel("Completed Lessons")
 plt.ylabel("Quiz Score")
@@ -46,14 +46,14 @@ fitted_values = model.fittedvalues
 # Task 8: Calculate residuals
 residuals = y - fitted_values
 
-# Task 9: Check normality assumption
+# Task 9: Check a normality assumption
 plt.hist(residuals, bins=20, edgecolor='black')
 plt.xlabel("Residuals")
 plt.title("Histogram of Residuals")
 plt.show()
 plt.clf()
 
-# Task 10: Check homoscedasticity assumption
+# Task 10: Check a homoscedasticity assumption
 plt.scatter(fitted_values, residuals)
 plt.axhline(0, color='red', linestyle='--')
 plt.xlabel("Fitted Values")
@@ -62,13 +62,13 @@ plt.title("Residuals vs Fitted Values")
 plt.show()
 plt.clf()
 
-# Task 11: Create a boxplot of score vs lesson
+# Task 11: Create a boxplot of score vs. lesson
 sns.boxplot(x='lesson', y='score', data=codecademy)
 plt.title("Quiz Score by Lesson")
 plt.show()
 plt.clf()
 
-# Task 12: Fit a linear regression to predict score based on which lesson they took
+# Task 12: Fit a linear regression to predict the score based on which lesson they took
 codecademy['lesson_B'] = (codecademy['lesson'] == 'Lesson B').astype(int)
 X_lesson = sm.add_constant(codecademy['lesson_B'])
 model_lesson = sm.OLS(codecademy['score'], X_lesson).fit()
@@ -81,7 +81,7 @@ print(lesson_means)
 mean_difference = lesson_means['Lesson B'] - lesson_means['Lesson A']
 print(f"Mean difference (Lesson B - Lesson A): {mean_difference}")
 
-# Task 14: Use sns.lmplot() to plot score vs. completed colored by lesson
+# Task 14: Use sns.lmplot() to plot score vs. completed colored by a lesson
 sns.lmplot(x='completed', y='score', hue='lesson', data=codecademy)
 plt.title("Score vs Completed by Lesson")
 plt.show()
