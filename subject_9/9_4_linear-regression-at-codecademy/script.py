@@ -17,7 +17,7 @@ plt.title("Quiz Score vs Completed Lessons")
 plt.show()
 plt.clf()
 
-# Task 3: Fit a linear regression to predict score based on prior lessons completed
+# Task 3: Fit a linear regression to predict a score based on prior lessons completed
 X = sm.add_constant(codecademy['completed'])
 y = codecademy['score']
 model = sm.OLS(y, X).fit()
