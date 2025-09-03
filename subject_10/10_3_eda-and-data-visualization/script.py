@@ -48,7 +48,7 @@ sns.histplot(flight, x="coach_price", hue=flight.inflight_entertainment)
 plt.show()
 plt.clf()
 
-# Inflight WiFi
+# Inflight Wi-Fi
 sns.histplot(flight, x="coach_price", hue=flight.inflight_wifi)
 plt.show()
 plt.clf()

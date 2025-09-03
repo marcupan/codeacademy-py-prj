@@ -7,12 +7,13 @@ import seaborn as sns
 df = pd.read_csv("mushroom_data.csv")
 print(df.head())
 
-# Task 2: Get list of all column headers
+# Task 2: Get a list of all column headers
 columns = df.columns.tolist()
 
 # Task 3, 8: Loop through columns, plot countplot ordered by descending frequency
 for column in columns:
-    # (Uncomment to verify loop)  # Task 2
+    # (Uncomment to verify loop)
+    # Task 2
     # print(column)
 
     sns.countplot(
