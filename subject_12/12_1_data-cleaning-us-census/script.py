@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import glob
 
-# Task 1: List all CSV files in directory to inspect naming
+# Task 1: List all CSV files in the directory to inspect naming
 csv_files = glob.glob("*.csv")
 print("CSV files available:", csv_files)
 
@@ -22,7 +22,7 @@ print(us_census.dtypes)
 # Task 4: Preview first rows
 print(us_census.head())
 
-# Task 5: Clean 'Income' column (remove '$' and ',') and convert to float
+# Task 5: Clean the 'Income' column (remove '$' and ',') and convert to float
 us_census['Income'] = (
     us_census['Income']
     .str.replace(r"[\$,]", "", regex=True)
@@ -42,7 +42,7 @@ us_census['Women'] = us_census['Women'].str.replace('F', '', regex=False)
 us_census['Women'] = us_census['Women'].replace('', np.nan)
 us_census['Women'] = pd.to_numeric(us_census['Women'], errors='coerce')
 
-# Task 8: Scatterplot of Income vs Women count
+# Task 8: Scatterplot of Income vs. Women count
 plt.scatter(us_census['Women'], us_census['Income'])
 plt.xlabel('Women (count)')
 plt.ylabel('Income (USD)')
@@ -87,4 +87,4 @@ for col in race_cols:
     plt.clf()
 
 # Task 15: Additional analyses can be added below
-# e.g., plot Income vs percent White, explore correlations, etc.
+# e.g., plot Income vs. percent White, explore correlations, etc.
